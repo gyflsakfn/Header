@@ -1,0 +1,219 @@
+/* COMMEN */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  /* 행간 */
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #066125;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 9;
+}
+
+header>.inner {
+  height: 70px;
+}
+
+header .head-logo {
+  height: 100%;
+  width: 250px;
+}
+header .head-logo a {
+  width: 230px;
+  height: 55px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  display: flex;
+}
+header .head-logo a:hover {
+  cursor: pointer;
+}
+
+header .head-logo h1 {
+  float: left;
+  align-items: center;
+}
+
+header .head-logo a {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 em img {
+  width: 75px;
+  height: 48px;
+  margin-right: 10px;
+}
+header h1 strong img {
+  width: 110px;
+  height: 40px;
+}
+header .nav {
+  left: 20px;
+  width: 400px;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+/* 각 메인 메뉴들 가로정렬 */
+header .nav>.gnb{ 
+  display: flex;
+  list-style:none;
+}
+
+header .nav>.gnb>li{
+  position: relative;
+  width: 100px;
+  box-sizing: border-box;
+  height: 50px;
+  top: 20px;
+}
+header .nav>.gnb>li>a{
+  display: block;
+  height: 100%;
+  /* line-height: 50px;  */
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 800;
+}
+header .nav>.gnb>li> .nom{
+  color: #333;
+}
+header .nav>.gnb>li> .nom:hover {
+  color: #66cc00;
+}
+header .nav>.gnb>li> .im{
+  color: #66cc00;
+}
+
+
+/* 서브메뉴 */
+header .nav .lnb{
+  border-top: 1px solid #066125;
+  display: none;
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  width: 300px;
+  
+  list-style:none;
+}
+header .nav li:hover>.lnb{
+  display: flex;
+  padding-left:0px;
+  margin: 10px;
+}
+header .nav .lnb>li:last-child{
+  border-bottom-width: 0;
+}
+header .nav .lnb>li>a{
+  font-size: 12px;
+  /* 서브메뉴 가로길이 */
+  width: 140px;
+  display: block;
+  line-height: 45px;
+  text-align: center;
+  background-color: #f1f8e9;
+  color: #5D5D5D;
+  font-size: 16px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
+}
+header .nav .lnb>li:hover>a{
+  color: #111;
+  box-sizing: border-box;
+  border-bottom: 3px solid #8bc34a;
+}
+
+/* 부모요소는 inner*/
+header .sub-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: flex;
+  height: 45px;
+}
+
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+header .sub-menu ul.menu li {
+  position: relative;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+header .sub-menu ul.menu li::before {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #5D5D5D;
+  /*position: absolute와 fixed는 블록요소로 바뀐다. */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li .material-icons {
+  padding: 11px 16px;
+  color: #5D5D5D;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 18px;
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 11px 16px;
+  display: block;
+  color: #5D5D5D;
+  font-weight: 700;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #2d9725;
+}
+header .sub-menu ul.menu li .material-icons:hover {
+  color: #2d9725;
+  cursor: pointer;
+}
